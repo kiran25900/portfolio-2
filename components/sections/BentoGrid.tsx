@@ -2,6 +2,19 @@
 
 import { Warp } from "@paper-design/shaders-react";
 
+type ShaderShape = "checks" | "stripes" | "edge";
+
+interface ShaderConfig {
+  proportion: number;
+  softness: number;
+  distortion: number;
+  swirl: number;
+  swirlIterations: number;
+  shape: ShaderShape;
+  shapeScale: number;
+  colors: string[];
+}
+
 interface ServiceCard {
   icon: string;
   title: string;
@@ -58,15 +71,15 @@ const services: ServiceCard[] = [
   },
 ];
 
-const getShaderConfig = (index: number) => {
-  const configs = [
+const getShaderConfig = (index: number): ShaderConfig => {
+  const configs: ShaderConfig[] = [
     {
       proportion: 0.3,
       softness: 0.8,
       distortion: 0.15,
       swirl: 0.6,
       swirlIterations: 8,
-      shape: "checks" as const,
+      shape: "checks",
       shapeScale: 0.08,
       colors: ["hsl(280, 100%, 30%)", "hsl(320, 100%, 60%)", "hsl(340, 90%, 40%)", "hsl(300, 100%, 70%)"],
     },
@@ -106,7 +119,7 @@ const getShaderConfig = (index: number) => {
       distortion: 0.16,
       swirl: 0.85,
       swirlIterations: 11,
-      shape: "checks" as const,
+      shape: "checks",
       shapeScale: 0.11,
       colors: ["hsl(250, 100%, 30%)", "hsl(270, 100%, 65%)", "hsl(260, 90%, 35%)", "hsl(265, 100%, 70%)"],
     },
