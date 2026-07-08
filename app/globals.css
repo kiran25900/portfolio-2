@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Material Symbols ── */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* ── Custom Utilities ── */
+@layer utilities {
+
+  /* Dynamic Shader Gradient */
+  .shader-gradient {
+    background: linear-gradient(135deg, #f8faf3 0%, #dde5d8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Dark Mode Shader: Deep Charcoal to Pure Black */
+  .dark .shader-gradient {
+    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+  }
+
+  .shader-gradient::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center,
+        rgba(63, 104, 64, 0.03) 0%,
+        transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Neon accent for the radial glow in dark mode */
+  .dark .shader-gradient::after {
+    background: radial-gradient(circle at center,
+        rgba(255, 255, 255, 0.02) 0%,
+        transparent 60%);
+  }
+
+  /* Bento Borders: Thin, elegant lines */
+  .bento-border {
+    border: 0.5px solid rgba(173, 180, 168, 0.3);
+  }
+
+  .dark .bento-border {
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Subtle, deep shadow for dark mode */
+  .liquid-shadow {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  .dark .liquid-shadow {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* ── Base Setup ── */
+:root {
+  --font-suse: "SUSE", monospace;
+}
+
+/* ── Global Dark Mode Overrides ── */
+.dark body {
+  background-color: #000000;
+  color: #e5e7eb;
+  /* Ash Gray text */
+}
+
+html,
+body {
+  font-family: "SUSE", monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Smooth Scrolling ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Selection Color ── */
+::selection {
+  background-color: #0a0c0a;
+  color: #ffffff;
+}
+
+/* Neon accent for selection in Dark Mode */
+.dark ::selection {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ── Custom Scrollbar for Editorial Feel ── */
+.dark ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 10px;
+}

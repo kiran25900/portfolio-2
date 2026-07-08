@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-tertiary": "#ffffff", "on-error-container": "#93000a", "on-secondary-fixed": "#1b1c1b", "on-tertiary-fixed": "#1e1b1b", "surface-variant": "#e5e2e1", "on-primary-fixed": "#1b1c1a", "inverse-primary": "#c7c6c3", "on-surface-variant": "#454843", "on-secondary-container": "#636261", "secondary-dim": "#475745", "outline-variant": "#c5c7c1", "inverse-on-surface": "#f4f0ef", "tertiary-fixed": "#e8e1e0", "surface-container": "#f1edec", "surface-tint": "#5e5f5c", "error-dim": "#791903", "on-surface": "#1c1b1b", "inverse-surface": "#313030", "primary-fixed-dim": "#c7c6c3", "surface-bright": "#fcf8f7", secondary: "#5f5e5d", "on-tertiary-fixed-variant": "#4a4646", "on-error": "#ffffff", "secondary-fixed-dim": "#c8c6c4", "surface-container-highest": "#e5e2e1", error: "#ba1a1a", "secondary-container": "#e2dfdd", "on-background": "#1c1b1b", tertiary: "#0d0b0b", "surface-dim": "#ddd9d8", primary: "#0a0c0a", "on-secondary": "#ffffff", "surface-container-high": "#ebe7e6", "on-primary-fixed-variant": "#464745", "primary-container": "#212220", background: "#fcf8f7", "on-primary": "#ffffff", outline: "#757873", "error-container": "#ffdad6", "on-tertiary-container": "#8d8887", "tertiary-container": "#242121", "on-primary-container": "#898986", surface: "#fcf8f7", "tertiary-dim": "#525624", "tertiary-fixed-dim": "#ccc5c4", "on-secondary-fixed-variant": "#474745", "primary-dim": "#345c35", "surface-container-low": "#f7f3f2", "surface-container-lowest": "#ffffff", "primary-fixed": "#e4e2df", "secondary-fixed": "#e5e2e0"}, fontFamily: {headline: ["Lexend"], body: ["Inter"], label: ["Inter"], display: "Lexend"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shader-gradient {
+            background: linear-gradient(135deg, #f8faf3 0%, #dde5d8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .shader-gradient::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(63, 104, 64, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .bento-border {
+            border: 0.5px solid rgba(173, 180, 168, 0.3);
+        }
+        .liquid-shadow {
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-200/30">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-primary font-headline" style="">OSBORN.DEV</div>
+<div class="hidden md:flex items-center gap-8 font-headline tracking-tight font-semibold">
+<a class="text-primary border-b-2 border-primary pb-1" href="#" style="">Work</a>
+<a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="#" style="">Tech</a>
+<a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="#" style="">Journal</a>
+<a class="text-zinc-500 hover:text-zinc-900 transition-colors" href="#" style="">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-headline font-semibold hover:opacity-80 transition-all active:scale-[0.98]" style="">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="shader-gradient min-h-[819px] flex flex-col justify-center items-center px-6 py-24 text-center">
+<div class="max-w-5xl mx-auto">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary mb-6 block" style="">Precision Engineering Studio</span>
+<h1 class="font-headline text-5xl md:text-8xl font-black tracking-tight leading-[0.9] text-on-surface mb-8" style="">
+                    ADAPTABLE ENGINEERING FOR THE AMBITIOUS</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 font-medium" style="">
+                    From validated MVPs to resilient enterprise architecture, we build technical solutions for a connected world.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="liquid-shadow bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-lg border border-white/20 hover:scale-[1.02] transition-transform" style="">
+                        Start Your Project
+                    </button>
+<button class="px-10 py-5 rounded-full font-headline font-bold text-lg text-primary border border-primary/20 bg-white/40 backdrop-blur hover:bg-white/60 transition-colors" style="">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+</section>
+<!-- Tech Stack Ticker -->
+<div class="bg-surface-container-low py-10 border-y bento-border">
+<div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-center gap-6 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-2 font-headline font-bold tracking-tighter text-xl" style="">
+<span class="material-symbols-outlined text-primary" style="">terminal</span> Node.js
+                </div>
+<div class="flex items-center gap-2 font-headline font-bold tracking-tighter text-xl" style="">
+<span class="material-symbols-outlined text-primary" style="">deployed_code</span> React
+                </div>
+<div class="flex items-center gap-2 font-headline font-bold tracking-tighter text-xl" style="">
+<span class="material-symbols-outlined text-primary" style="">cloud</span> AWS
+                </div>
+<div class="flex items-center gap-2 font-headline font-bold tracking-tighter text-xl" style="">
+<span class="material-symbols-outlined text-primary" style="">database</span> Postgres
+                </div>
+<div class="flex items-center gap-2 font-headline font-bold tracking-tighter text-xl" style="">
+<span class="material-symbols-outlined text-primary" style="">box</span> Docker/K8s
+                </div>
+</div>
+</div>
+<!-- Bento Grid Services -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="mb-16">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary mb-2 block" style="">Capabilities</span>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight" style="">Technical Ecosystems.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- MVP Development -->
+<div class="md:col-span-8 bg-surface-container-low rounded-lg p-10 bento-border group hover:border-primary transition-colors overflow-hidden relative">
+<span class="material-symbols-outlined text-primary/5 absolute -right-4 -bottom-4 text-[160px] pointer-events-none" style="">rocket_launch</span>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="">rocket_launch</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">MVP Development</h3>
+<p class="text-on-surface-variant max-w-md" style="">Rapid iteration cycles to transform concepts into production-ready products. We focus on core value propositions and scalable foundations.</p>
+</div>
+</div>
+<!-- Cloud Infrastructure -->
+<div class="md:col-span-4 bg-surface-container-highest rounded-lg p-10 bento-border group hover:border-primary transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="">cloud_done</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">Cloud Infrastructure</h3>
+<p class="text-on-surface-variant text-sm" style="">Resilient, automated AWS/GCP architecture designed for 99.9% uptime.</p>
+</div>
+<!-- API Integration -->
+<div class="md:col-span-4 bg-surface-container-highest rounded-lg p-10 bento-border group hover:border-primary transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="">api</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">API Integration</h3>
+<p class="text-on-surface-variant text-sm" style="">Building seamless bridges between disparate systems with REST and GraphQL.</p>
+</div>
+<!-- Staff Augmentation -->
+<div class="md:col-span-4 bg-surface-container-low rounded-lg p-10 bento-border group hover:border-primary transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="">groups</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">Staff Augmentation</h3>
+<p class="text-on-surface-variant text-sm" style="">Senior-level engineers that integrate directly into your internal workflows.</p>
+</div>
+<!-- Quality Assurance -->
+<div class="md:col-span-4 bg-surface-container-low rounded-lg p-10 bento-border group hover:border-primary transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="">verified_user</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">Quality Assurance</h3>
+<p class="text-on-surface-variant text-sm" style="">Automated testing suites that ensure every deployment is bulletproof.</p>
+</div>
+<!-- Legacy Modernization -->
+<div class="md:col-span-12 bg-surface text-on-surface rounded-lg p-12 border-2 border-primary/20 flex flex-col md:flex-row items-center gap-12 group hover:bg-surface-container transition-all">
+<div class="flex-1">
+<div class="inline-block px-3 py-1 rounded-full bg-primary-container text-primary text-xs font-bold uppercase tracking-widest mb-6" style="">High Impact</div>
+<h3 class="font-headline text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter font-bold" style="">Legacy Modernization</h3>
+<p class="text-lg text-on-surface-variant" style="">We dismantle technical debt. Migrating monolithic systems to microservices without interrupting your business flow.</p>
+</div>
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-[120px] text-primary opacity-20 group-hover:opacity-100 transition-opacity" style="">memory</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Case Study -->
+<section class="bg-inverse-surface py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary mb-6 block" style="">Featured Work</span>
+<h2 class="font-headline text-4xl md:text-6xl font-black text-white leading-tight mb-8" style="">Global Logistics Architecture Modernization</h2>
+<p class="text-zinc-400 text-lg mb-12" style="">How we helped a Fortune 500 logistics firm transition from legacy mainframes to a distributed, event-driven cloud architecture, reducing latency by 74%.</p>
+<div class="grid grid-cols-3 gap-6 mb-12">
+<div>
+<div class="text-3xl font-headline font-black text-primary" style="">74%</div>
+<div class="text-xs uppercase text-zinc-500 font-bold mt-1" style="">Latency Reduction</div>
+</div>
+<div>
+<div class="text-3xl font-headline font-black text-primary" style="">12M+</div>
+<div class="text-xs uppercase text-zinc-500 font-bold mt-1" style="">Daily Events</div>
+</div>
+<div>
+<div class="text-3xl font-headline font-black text-primary" style="">99.99</div>
+<div class="text-xs uppercase text-zinc-500 font-bold mt-1" style="">Uptime Goal</div>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline font-bold flex items-center gap-3 group" style="">
+                            Read Full Case Study
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="">arrow_forward</span>
+</button>
+</div>
+<div class="relative">
+<div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden border border-zinc-700 shadow-2xl relative">
+<img alt="Data Center Architecture" class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="detailed abstract technical blueprint visualization of server racks and connected nodes in a futuristic data center with glowing green lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSGcZ8mn6OgLH-35DvvJ8hv9vLpUWnTz2JoraHgSQYwtCj37I37U8zeMeLpJB81gVo5mO-x-fTrfpvqIsg7_6f9mGEnI7oBj_CMPR40NM7b16LPxY-Pbf9WVYTTMo9vD8R73lrJ8wi1Lx_Tx_tveLWyhn_uYircU49Z7PF4mH4aC4iL2OPhJxyuSrveJxwfyxTqNkL-RyL-OAwtCnjOVO-Ikk0KV4cMx6Z5oDG1-1eder8DTSNDL9EJkH45M5ZWz7AvPOWgDOFpKk" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 p-6 bg-white/5 backdrop-blur-md rounded border border-white/10">
+<code class="text-primary text-sm font-mono block mb-2">// System Architecture Visualization</code>
+<div class="h-2 w-full bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-black mb-8" style="">Ready to <span class="text-primary" style="">evolve</span>?</h2>
+<p class="text-xl text-on-surface-variant mb-12" style="">Whether you need a dedicated squad or a full-scale architectural overhaul, our engineers are ready to build the future of your platform.</p>
+<div class="inline-flex p-1 bg-surface-container-highest rounded-full border bento-border">
+<input class="bg-transparent border-none focus:ring-0 px-8 py-4 w-64 md:w-80" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-headline font-bold hover:opacity-90 transition-opacity" style="">
+                        Join the Beta
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-200 bg-[#f1f5ec]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 max-w-7xl mx-auto">
+<div>
+<div class="font-headline font-black uppercase text-zinc-400 text-2xl mb-6" style="">OSBORN.DEV</div>
+<p class="text-zinc-500 max-w-sm mb-8" style="">High-end editorial engineering for modern digital ecosystems. Built for scale, performance, and the ambitious.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white border border-zinc-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#" style="">
+<span class="material-symbols-outlined text-sm" style="">code</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white border border-zinc-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#" style="">
+<span class="material-symbols-outlined text-sm" style="">hub</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white border border-zinc-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#" style="">
+<span class="material-symbols-outlined text-sm" style="">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-headline font-bold text-primary mb-4" style="">Ecosystem</h4>
+<ul class="space-y-2 text-zinc-500 text-sm">
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Documentation</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Source</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Components</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Resources</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary mb-4" style="">Company</h4>
+<ul class="space-y-2 text-zinc-500 text-sm">
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Privacy</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Status</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Journal</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Careers</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-8 border-t border-zinc-200 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-zinc-500 text-sm font-body tracking-wide" style="">© 2024 OSBORN.DEV — ENGINEERED WITH PRECISION</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-zinc-400" style="">All Systems Operational</span>
+</div>
+</div>
+</footer>
+</body></html>
